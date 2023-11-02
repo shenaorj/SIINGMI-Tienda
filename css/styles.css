@@ -1,0 +1,171 @@
+/* General */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligh-organge: #F9EFED;
+    --text-input-field: #F4F4F4;
+    --orange: #E84926;
+    --gray-dark: #929191;
+    --gray-ligh: #BCBCBB;
+    --sm: 8px;
+    --md: 12px;
+    --lg: 16px;
+    --xl: 20px;
+    --xxl: 24px;
+    --letterspa_big: 3.98px;
+    --letterspa_md: 3.6px;
+}
+
+@font-face {
+    font-family: Avenir-Light;
+    src: url('./fonts/Avenir LT 35 Light Regular.ttf');
+}
+
+
+body {
+    font-family: 'Avenir-Light', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.inactive {
+    display: none;
+}
+
+/* Navbar (general) */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    height: auto;
+}
+
+nav .nav-logo-container {
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+    display: grid;
+    align-items: center;
+   
+}
+
+nav .nav-botton-container {
+    display: flex;
+    place-content: center;
+    
+}
+
+
+nav .nav-logos-inv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.logo-gdartia-big {
+    width: 90px;
+    height: 90px;
+}
+
+.shopping-car {
+    width: 20px;
+    height: 20px;
+}
+
+.botton-nav {
+    background-color: white;
+    border: none;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+   
+}
+
+.name-menus-nav {
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid var(--gray-dark);
+    border-right: 1px solid var(--gray-dark);
+    margin-bottom: 4px;
+}
+
+.botton-nav a {
+    font-size: var(--md);
+    letter-spacing: var(--letterspa_big);
+    text-decoration: none;
+    display: inline;
+    color: var(--orange);
+}
+
+.arrow_nav {
+    width: 9px;
+    height: 9px;
+    color: var(--orange);
+    /* no funciona el color */
+}
+
+.barra-vertical-botton {
+    width: 30px;
+    height:15px;
+}
+
+.identificador-hover-container {
+    display: grid;
+    height:15px;
+
+}
+.identificador-hover-container img {
+    width: max-content;
+}
+
+/* main */
+
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100%;
+    background-image: url('../img/bg-main.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ .main-section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+ }
+ 
+ main .main-h1-iz {
+    font-size: var(--xxl);
+    color: var(--orange);
+    letter-spacing: var(--letterspa_md);
+ }
+
+ main .main-h1-der {
+    font-size: var(--xxl);
+    color: var(--gray-dark);
+    letter-spacing: var(--letterspa_md);
+ }
+ .paralelogramo-orange {
+    width: 100px;
+    height: 100px;
+    background-color: var(--orange);
+    transform: skewX(20deg);
+    margin-right: 20px; /* Espacio entre los paralelogramos */
+}
+
+.paralelogramo-gray {
+    width: 100px;
+    height: 100px;
+    background-color: var(--gray-dark);
+    transform: skewX(20deg);
+    margin-right: 20px; /* Espacio entre los paralelogramos */
+}
