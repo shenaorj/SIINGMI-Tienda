@@ -12,21 +12,22 @@
     --lg: 16px;
     --xl: 20px;
     --xxl: 24px;
+    --XXXl: 44px;
     --letterspa_big: 3.98px;
     --letterspa_md: 3.6px;
 }
 
 @font-face {
-    font-family: Avenir-Light;
-    src: url('./fonts/Avenir LT 35 Light Regular.ttf');
+    font-family: 'Avenir-Light';
+    src: url('../fonts/Avenir_LT_35_Light_Regular.ttf');
 }
 
 
 body {
-    font-family: 'Avenir-Light', sans-serif;
+    font-family: 'Avenir-Light';
     margin: 0;
     padding: 0;
-    position: fixed;
+    overflow-x: hidden;
     top: 0;
     bottom: 0;
     left: 0;
@@ -129,43 +130,146 @@ nav .nav-logos-inv {
 /* main */
 
 .home-main {
+    position: relative;
+    
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     height: 100%;
     background-image: url('../img/bg-main.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    place-content: center
+    ;
   }
- .main-section-center {
+ .home-title-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    text-align: center;
  }
- 
- main .main-h1-iz {
+ .section-main-one {
+    border-right: 1px solid var(--gray-ligh);
+    padding-right: 20px;
+ }
+ .section-main-two {
+
+    border-left: 1px solid var(--gray-ligh);
+    padding-left: 20px;
+ }
+
+
+.home-title-container :nth-child(1) h1{
+
     font-size: var(--xxl);
     color: var(--orange);
     letter-spacing: var(--letterspa_md);
  }
+ .home-title-container :nth-child(1) h3{
+   
+    font-size: var(--lg);
+    color: var(--orange);
+    letter-spacing: var(--letterspa_md);
+ }
 
- main .main-h1-der {
+ .home-title-container :nth-child(2) h1{
+   
     font-size: var(--xxl);
     color: var(--gray-dark);
     letter-spacing: var(--letterspa_md);
  }
- .paralelogramo-orange {
-    width: 100px;
-    height: 100px;
-    background-color: var(--orange);
-    transform: skewX(20deg);
-    margin-right: 20px; /* Espacio entre los paralelogramos */
+ .home-title-container :nth-child(2) h3{
+    
+    font-size: var(--lg);
+    color: var(--gray-ligh);
+    letter-spacing: var(--letterspa_md);
+    
+ }
+
+
+main .home-services-container{
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+  
+
+}
+
+.paralelogramo-orange {
+    display: grid;
+    place-content: center;
+    position: absolute;
+    width: 1200px; /* Ancho del rectángulo */
+    height: 100%; /* Alto del rectángulo */
+    background-color: var(--orange); /* Color de fondo */
+    clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%, 0% 0%);
+    left: -850px;
+}
+
+.paralelogramo-orange a {
+    font-size: var(--XXXl);
+    text-decoration: none;
+    color: var(--very-ligh-organge);
+    
 }
 
 .paralelogramo-gray {
-    width: 100px;
-    height: 100px;
-    background-color: var(--gray-dark);
-    transform: skewX(20deg);
-    margin-right: 20px; /* Espacio entre los paralelogramos */
+    display: grid;
+    place-content: center;
+    position: absolute;
+    width: 1200px; /* Ancho del rectángulo */
+    height: 100%; /* Alto del rectángulo */
+    background-color: var(--gray-dark); /* Color de fondo */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 20% 100%);
+    left: 100px;
+
 }
+
+.paralelogramo-gray a {
+    font-size: var(--XXXl);
+    text-decoration: none;
+    color: var(--very-ligh-organge);
+    
+}
+
+main .home-tienda-container {
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    place-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+.home-tienda-container h1 {
+    font-size: var(--xxl);
+    color: var(--gray-dark);
+    letter-spacing: var(--letterspa_md);
+}
+
+.home-tienda-container h4 {
+    font-size: var(--lg);
+    color: var(--gray-dark);
+    letter-spacing: var(--letterspa_md);
+
+}
+.home-tienda-container :nth-child(3) img {
+    width: 30%;
+    height: 20%;
+    transform: rotate(180deg);
+}
+
+.home-tienda-container-topproductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.home-tienda-container-topproductos div {
+    width: 100%;
+    height: 300px;
+
+}
+
+
