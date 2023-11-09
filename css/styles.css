@@ -15,6 +15,7 @@
     --XXXl: 44px;
     --letterspa_big: 3.98px;
     --letterspa_md: 3.6px;
+    --letterspa_sm: 3px;
 }
 
 @font-face {
@@ -37,6 +38,41 @@ body {
 .inactive {
     display: none;
 }
+
+/* 
+ws flotting botton*/
+
+.btn-wsp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    line-height: 63px;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all 300ms ease;
+}
+
+.btn-wsp:hover {
+    background: #20ba5a;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .btn-wsp {
+        width: 63px;
+        height: 63px;
+        line-height: 66px;
+    }
+}
+
+
+
 
 /* Navbar (general) */
 nav {
@@ -314,6 +350,7 @@ main .home-tienda-container-topproductos {
     margin-top: 20px;
 
 }
+
 /* Container 1 */
 
 .home-tienda-container-topproductos .home-tienda-container-one {
@@ -465,6 +502,7 @@ main .home-gdartia-container {
     margin: 0;
 
 }
+
 .home-gdartia-container h3 {
     color: var(--gray-ligh);
     margin: 0;
@@ -502,3 +540,127 @@ main .home-gdartia-banner {
     font-size: var(--lg);
 }
 
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(5, 1fr)  2fr;
+    width: 100%;
+    height: 150px;
+    background-color: var(--orange);
+}
+
+footer .main-div1-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: grid;
+
+}
+
+.main-div1-container img {
+    height: 100%;
+    width: 60%;
+    align-self: flex-end;
+}
+
+footer .main-div2-container {
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+
+}
+
+.main-logito-img {
+    margin: 10px 0 10px;
+    padding: 0;
+    width: 50%;
+}
+
+.main-div2-container h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--very-ligh-organge);
+    font-size: var(--md);
+    letter-spacing: var(--letterspa_sm);
+}
+
+.main-div2-container div {
+    width: 90px;
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    justify-items: center;
+    border: 2px solid var(--very-ligh-organge);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.main-div2-container a {
+    display: grid;
+    height: 20px;
+    width: 30px;
+    border-right: 2px solid var(--very-ligh-organge);
+    place-content: center;
+
+}
+
+.main-div2-container a img {
+    height: 13px;
+}
+
+.main-div1-container h1,
+.main-div3-container h1,
+.main-div4-container h1,
+.main-div5-container h1,
+.main-div6-container h1,
+.main-div7-container h1 {
+    width: 100%;
+    height: 55px;
+    color: var(--very-ligh-organge);
+    opacity: 50%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xl);
+    text-align: center;
+}
+
+.main-div5-container {
+    display: grid;
+    align-items: flex-start;
+}
+
+.main-div3-container,
+.main-div6-container {
+    display: grid;
+    align-items: center;
+}
+
+.main-div4-container,
+.main-div7-container {
+    display: grid;
+    align-items: flex-end;
+}
+
+.main-div9-container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.main-div9-container h2 {
+    color: var(--very-ligh-organge);
+    margin: 5px 0 5px;
+    font-size: var(--lg);
+}
+
+.main-div9-container a {
+    width: 100%;
+    height: 100%;
+}
+
+.main-div9-container a img {
+    width: 68%;
+    height: 68%;
+}
