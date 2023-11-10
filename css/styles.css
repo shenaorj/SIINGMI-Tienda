@@ -15,7 +15,8 @@
     --XXXl: 44px;
     --letterspa_big: 3.98px;
     --letterspa_md: 3.6px;
-    --letterspa_sm: 3px;
+    --letterspa_sm: 2px;
+    --letterspa_xsm: 1px;
 }
 
 @font-face {
@@ -77,7 +78,7 @@ ws flotting botton*/
 /* Navbar (general) */
 nav {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     align-items: center;
     height: auto;
     margin-bottom: 50px;
@@ -95,20 +96,16 @@ nav .nav-logo-container {
 nav .nav-botton-container {
     display: flex;
     place-content: center;
-
+    margin-top: 10px;
 }
 
-
-nav .nav-logos-inv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 50px;
+.nav-logos-inv{
+    display: grid;
+    align-items: end;
 }
 
 .logo-gdartia-big {
-    width: 90px;
-    height: 90px;
+    height: 12px;
 }
 
 .shopping-car {
@@ -171,13 +168,92 @@ nav .nav-logos-inv {
 
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 100px 300px 190px 520px 200px 600px;
+    grid-template-rows: 150px 300px 180px 520px 100px 600px;
     height: 100%;
     /* background-image: url('../img/bg-main.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     place-content: center;
+}
+.home-tittle-papeltapiz1 {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.home-tittle-papeltapiz1 h1:nth-child(1) {
+    display: grid;
+    grid-column: 1;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: center;
+}
+.home-tittle-papeltapiz1 h1:nth-child(2) {
+    display: grid;
+    grid-column: 2;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: end;
+    align-self: flex-end;
+}
+
+.home-tittle-papeltapiz1 h1:nth-child(3) {
+    display: grid;
+    grid-column: 3;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: center;
+}
+
+.home-tittle-papeltapiz2 {
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.home-tittle-papeltapiz2 img:nth-child(1){
+    grid-column: 1;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    
+}
+
+.home-tittle-papeltapiz2 img:nth-child(2){
+    grid-column: 2;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    text-align: end;
+    align-self: flex-end;
+    
+}
+.home-tittle-papeltapiz2 img:nth-child(3){
+    grid-column: 3;
+    display: grid;
+    width: 60%;
+    height: 50%;
+    
 }
 
 .home-title-container {
@@ -306,37 +382,165 @@ main .home-services-container {
     color: var(--very-ligh-organge);
 
 }
+.home-tienda-container {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-main .home-tienda-container {
-    width: auto;
-    height: 170px;
+ .home-tienda-container div:nth-child(1) {
+    grid-column: 1;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.home-tienda-container div:nth-child(1) h1:nth-child(1) {
+    display: grid;
+    grid-column: 1;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: center;
+}
+.home-tienda-container div:nth-child(1) h1:nth-child(2) {
+    display: grid;
     grid-column: 2;
-    grid-row: 3;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    align-self: flex-end;
+}
+
+.home-tienda-container div:nth-child(1) h1:nth-child(3) {
+    display: grid;
+    grid-column: 3;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: center;
+    padding-top: 20px;
+}
+
+.home-tienda-container div:nth-child(1) h1:nth-child(4) {
+    display: grid;
+    grid-column: 4;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: end;
+    align-self: flex-end;
+}
+
+.home-tienda-container div:nth-child(1) h1:nth-child(5) {
+    display: grid;
+    grid-column: 5;
+    width: 100%;
+    height: 55px;
+    color: var(--orange);
+    opacity: 20%;
+    letter-spacing: var(--letterspa_md);
+    font-weight: bolder;
+    margin: 10px 10px 0;
+    font-size: var(--xxl);
+    text-align: center;
+}
+
+.home-tienda-container div:nth-child(2) {
+    grid-column: 2;
     display: grid;
     grid-template-rows: 50px 50px 50px;
     place-content: center;
     text-align: center;
-
-
+    align-content: space-between
 }
 
-.home-tienda-container h1 {
+.home-tienda-container  div:nth-child(2) h1 {
     font-size: var(--xxl);
     color: var(--gray-dark);
     letter-spacing: var(--letterspa_md);
 }
 
-.home-tienda-container h4 {
+.home-tienda-container div:nth-child(2) h4 {
     font-size: var(--lg);
     color: var(--gray-dark);
     letter-spacing: var(--letterspa_md);
 
 }
 
-.home-tienda-container :nth-child(3) img {
+.home-tienda-container div:nth-child(2) img {
     width: 30%;
     height: 20%;
     transform: rotate(180deg);
+}
+
+.home-tienda-container div:nth-child(3) {
+    grid-column: 3;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.home-tienda-container div:nth-child(3) img:nth-child(1){
+    grid-column: 1;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.home-tienda-container div:nth-child(3) img:nth-child(2){
+    grid-column: 2;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    text-align: end;
+    align-self: flex-end;
+}
+
+.home-tienda-container div:nth-child(3) img:nth-child(3){
+    grid-column: 3;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.home-tienda-container div:nth-child(3) img:nth-child(4){
+    grid-column: 4;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    text-align: end;
+    align-self: flex-end;
+}
+
+
+.home-tienda-container div:nth-child(3) img:nth-child(5){
+    grid-column: 5;
+    display: grid;
+    width: 40px;
+    height: 50%;
+    text-align: center;
 }
 
 main .home-tienda-container-topproductos {
@@ -348,7 +552,6 @@ main .home-tienda-container-topproductos {
     grid-column-start: 1;
     grid-column-end: 4;
     margin-top: 20px;
-
 }
 
 /* Container 1 */
@@ -370,7 +573,7 @@ main .home-tienda-container-topproductos {
 
 .home-tienda-container-topproductos .home-tienda-container-one h4 {
     color: var(--text-input-field);
-    letter-spacing: var(--letterspa_md);
+    letter-spacing: var(--letterspa_xsm);
     font-size: var(--lg);
 }
 
@@ -396,7 +599,7 @@ main .home-tienda-container-topproductos {
 
 .home-tienda-container-two section h4 {
     color: var(--gray-ligh);
-    letter-spacing: var(--letterspa_md);
+    letter-spacing: var(--letterspa_xsm);
     font-size: var(--lg);
     text-align: center;
     padding: 0 100px 0;
@@ -431,7 +634,7 @@ main .home-tienda-container-topproductos {
 
 .home-tienda-container-three section h4 {
     color: var(--gray-ligh);
-    letter-spacing: var(--letterspa_md);
+    letter-spacing: var(--letterspa_xsm);
     font-size: var(--lg);
     text-align: center;
     padding: 0 60px 0;
@@ -465,7 +668,7 @@ main .home-tienda-container-topproductos {
 
 .home-tienda-container-four section h4 {
     color: var(--text-input-field);
-    letter-spacing: var(--letterspa_md);
+    letter-spacing: var(--letterspa_xsm);
     font-size: var(--lg);
     text-align: center;
     padding: 0 100px 0;
@@ -535,10 +738,12 @@ main .home-gdartia-banner {
 
 .home-gdartia-banner a {
     text-decoration: none;
-    color: var(--gray-ligh);
+    color: var(--orange);
     letter-spacing: var(--letterspa_md);
     font-size: var(--lg);
 }
+
+
 
 footer {
     display: grid;
@@ -572,9 +777,10 @@ footer .main-div2-container {
 }
 
 .main-logito-img {
-    margin: 10px 0 10px;
+    margin: 5px 0 5px;
     padding: 0;
-    width: 50%;
+    width: 80%;
+    
 }
 
 .main-div2-container h3 {
@@ -593,6 +799,7 @@ footer .main-div2-container {
     border: 2px solid var(--very-ligh-organge);
     border-radius: 5px;
     margin-bottom: 5px;
+    margin-top: 3px;
 }
 
 .main-div2-container a {
@@ -601,6 +808,7 @@ footer .main-div2-container {
     width: 30px;
     border-right: 2px solid var(--very-ligh-organge);
     place-content: center;
+  
 
 }
 
