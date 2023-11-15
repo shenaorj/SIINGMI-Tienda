@@ -534,7 +534,6 @@ main .home-services-container {
     align-self: flex-end;
 }
 
-
 .home-tienda-container div:nth-child(3) img:nth-child(5){
     grid-column: 5;
     display: grid;
