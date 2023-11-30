@@ -20,6 +20,11 @@
     --letterspa_xsm: 1px;
 }
 
+.inactive {
+    display: none;
+}
+/* fuente SIINGMI */
+
 @font-face {
     font-family: 'Avenir-Light';
     src: url('../fonts/Avenir_LT_35_Light_Regular.ttf');
@@ -36,13 +41,7 @@ body {
     left: 0;
     right: 0;
 }
-
-.inactive {
-    display: none;
-}
-
-/* 
-ws flotting botton*/
+/* ws flotting botton */
 
 .btn-wsp {
     position: fixed;
@@ -73,7 +72,10 @@ ws flotting botton*/
     }
 }
 
+/* header */
+
 header {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -87,7 +89,29 @@ header {
     padding-top: 10px;
 }
 
+/* section 1 logos */
+
+header .nav-logo-container {
+    position: relative;
+    width: 15%;
+    height: 40px;
+}
+
+/* logo registrado */
+header .nav-logo-container a:nth-child(1) {
+    width: 50%;
+    height: 40px;
+}
+
+/* Logo SII pequeño */
+header .nav-logo-container a:nth-child(2) {
+    width: 50%;
+    height: 40px;
+    display: none;
+}
+
 /* Navbar (general) */
+
 nav {
     position: relative;
     display: grid;
@@ -95,11 +119,6 @@ nav {
     align-items: center;
 }
 
-header .shopping-car {
-    position: relative;
-    width: 20px;
-    height: 20px;
-}
 
 nav .nav-botton-container {
     display: flex;
@@ -107,183 +126,243 @@ nav .nav-botton-container {
     margin-top: 10px;
 }
 
-/* logo registrado */
 
-header .nav-logo-container {
-    position: relative;
-    width: 220px;
+
+header .contenedor-mobile-menu {
+    width: 50%;
     height: 40px;
+    display: none;
 }
 
-header .nav-logo-container a {
+.inactive {
+    display: none;
+}
+
+
+
+/* mobile menu */
+
+.mobile-menu {
+    background-color: var(--white);
+    position: absolute;
+    top: 75px;
+    padding: 24px;
+    left: 0;
+    width: 25%;
+    margin-top: 5px;
+    border-radius: 0 0 10px 10px;
+    transition-duration: 1.2s;
+}
+
+header.abajo .mobile-menu {
+    background-color: var( --gray-dark-opacity);
+    transition-duration: 1.2s;
+  
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: var(--letterspa_md);
+    transition-duration: 1.2s;
+}
+
+
+header.abajo .mobile-menu a {
+    color: var(--text-input-field);
+    transition-duration: 1.2s;
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--gray-ligh);
+}
+
+.mobile-menu ul:nth-child(2) img {
     width: 100%;
-    height: 40px;
+    scale: 1.2;
 }
+
 
 .sii-r-cls-1 {
     fill: #979797;
-  }
+}
 
 .sii-r-cls-2 {
     font-family: AvenirNext-DemiBold, 'Avenir Next';
     font-size: 11.7px;
     font-weight: 300;
-  }
+}
 
-  .sii-r-cls-2, .sii-r-cls-3 {
+.sii-r-cls-2,
+.sii-r-cls-3 {
     fill: #888b8d;
-  }
+}
 
-  .sii-r-cls-4 {
+.sii-r-cls-4 {
     letter-spacing: .65em;
-  }
+}
 
-  .sii-r-cls-5, .sii-r-cls-6 {
+.sii-r-cls-5,
+.sii-r-cls-6 {
     fill: #e84926;
-  }
+}
 
-  .sii-r-cls-7 {
+.sii-r-cls-7 {
     opacity: .2;
-  }
+}
 
-  .sii-r-cls-6 {
+.sii-r-cls-6 {
     font-family: AvenirNextLTPro-Bold, 'Avenir Next LT Pro';
     font-size: 21.59px;
     font-weight: 700;
-  }
+}
 
-  .sii-r-cls-8 {
+.sii-r-cls-8 {
     letter-spacing: .68em;
-  }
+}
 
-  .sii-r-cls-9 {
+.sii-r-cls-9 {
     letter-spacing: .68em;
-  }
+}
 
-  .sii-r-cls-10 {
+.sii-r-cls-10 {
     fill: #e94a28;
-  }
+}
 
-  .sii-r-cls-11 {
+.sii-r-cls-11 {
     letter-spacing: .68em;
-  }
+}
 
-  .sii-r-cls-12 {
+.sii-r-cls-12 {
     clip-path: url(#clippath);
-  }
+}
 
-  .sii-r-cls-13 {
+.sii-r-cls-13 {
     letter-spacing: .68em;
-  }
+}
 
-  .sii-r-cls-14, .sii-r-cls-15 {
+.sii-r-cls-14,
+.sii-r-cls-15 {
     fill: none;
-  }
+}
 
-  .sii-r-cls-16 {
+.sii-r-cls-16 {
     letter-spacing: .62em;
-  }
+}
 
-  .sii-r-cls-17 {
+.sii-r-cls-17 {
     fill: #a8a8a8;
-  }
+}
 
-  .sii-r-cls-15 {
+.sii-r-cls-15 {
     stroke: #e94a28;
     stroke-miterlimit: 10;
     stroke-width: 2px;
-  }
+}
 
-  .sii-r-cls-18 {
+.sii-r-cls-18 {
     letter-spacing: .68em;
-  }
+}
+
 /* header abajo logo registrado */
 
-  header.abajo .sii-r-cls-1 {
-    fill:var(--text-input-field);
-  }
+header.abajo .sii-r-cls-1 {
+    fill: var(--text-input-field);
+}
 
-  header.abajo .sii-r-cls-2 {
+header.abajo .sii-r-cls-2 {
     font-family: AvenirNext-DemiBold, 'Avenir Next';
     font-size: 11.7px;
     font-weight: 300;
-  }
+}
 
-  header.abajo .sii-r-cls-2,  header.abajo .sii-r-cls-3 {
-    fill:var(--text-input-field);
-  }
+header.abajo .sii-r-cls-2,
+header.abajo .sii-r-cls-3 {
+    fill: var(--text-input-field);
+}
 
-  header.abajo .sii-r-cls-4 {
+header.abajo .sii-r-cls-4 {
     letter-spacing: .65em;
-  }
+}
 
-  header.abajo .sii-r-cls-5,  header.abajo .sii-r-cls-6 {
-    fill:var(--text-input-field);
-  }
+header.abajo .sii-r-cls-5,
+header.abajo .sii-r-cls-6 {
+    fill: var(--text-input-field);
+}
 
-  header.abajo .sii-r-cls-7 {
+header.abajo .sii-r-cls-7 {
     opacity: .2;
-  }
+}
 
-  header.abajo .sii-r-cls-6 {
+header.abajo .sii-r-cls-6 {
     font-family: AvenirNextLTPro-Bold, 'Avenir Next LT Pro';
     font-size: 21.59px;
     font-weight: 700;
-  }
+}
 
-  header.abajo .sii-r-cls-8 {
+header.abajo .sii-r-cls-8 {
     letter-spacing: .68em;
-  }
+}
 
-  header.abajo .sii-r-cls-9 {
+header.abajo .sii-r-cls-9 {
     letter-spacing: .68em;
-  }
+}
 
-  header.abajo .sii-r-cls-10 {
-    fill:var(--text-input-field);
-  }
+header.abajo .sii-r-cls-10 {
+    fill: var(--text-input-field);
+}
 
-  header.abajo .sii-r-cls-11 {
+header.abajo .sii-r-cls-11 {
     letter-spacing: .68em;
-  }
+}
 
-  header.abajo .sii-r-cls-12 {
+header.abajo .sii-r-cls-12 {
     clip-path: url(#clippath);
-  }
+}
 
-  header.abajo .sii-r-cls-13 {
+header.abajo .sii-r-cls-13 {
     letter-spacing: .68em;
-  }
+}
 
-  header.abajo .sii-r-cls-14,  header.abajo .sii-r-cls-15 {
+header.abajo .sii-r-cls-14,
+header.abajo .sii-r-cls-15 {
     fill: none;
-  }
+}
 
-  header.abajo .sii-r-cls-16 {
+header.abajo .sii-r-cls-16 {
     letter-spacing: .62em;
-  }
+}
 
-  header.abajo .sii-r-cls-17 {
-    fill:var(--text-input-field);
-  }
+header.abajo .sii-r-cls-17 {
+    fill: var(--text-input-field);
+}
 
-  header.abajo .sii-r-cls-15 {
+header.abajo .sii-r-cls-15 {
     stroke: var(--text-input-field);
     stroke-miterlimit: 10;
     stroke-width: 2px;
-  }
+}
 
-  header.abajo .sii-r-cls-18 {
+header.abajo .sii-r-cls-18 {
     letter-spacing: .68em;
-  }
+}
 
 
 /* header abajo */
 
 header.abajo {
     background: var(--gray-dark-opacity);
-    
-   
 }
 
 header.abajo .botton-nav a {
@@ -328,16 +407,34 @@ header.abajo .logo-sii-cls-3 {
 }
 
 .nav-botton-container .identificador-hover-container .cls-1 {
-    fill: var(--gray-dark); } /* color de barras abajo de botones del navbar */
-
-.nav-botton-container button:nth-child(1):hover .identificador-hover-container .cls-1, button:nth-child(2):hover .identificador-hover-container .cls-1, button:nth-child(3):hover .identificador-hover-container .cls-1, button:nth-child(4):hover .identificador-hover-container .cls-1, button:nth-child(5):hover .identificador-hover-container .cls-1, button:nth-child(6):hover .identificador-hover-container .cls-1 {
-    fill: var(--orange); 
-} /* color de barras abajo de botones del navbar hover */
-
-header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1  {
-    fill: var(--orange); 
+    fill: var(--gray-dark);
 }
 
+/* color de barras abajo de botones del navbar */
+
+.nav-botton-container button:nth-child(1):hover .identificador-hover-container .cls-1,
+button:nth-child(2):hover .identificador-hover-container .cls-1,
+button:nth-child(3):hover .identificador-hover-container .cls-1,
+button:nth-child(4):hover .identificador-hover-container .cls-1,
+button:nth-child(5):hover .identificador-hover-container .cls-1,
+button:nth-child(6):hover .identificador-hover-container .cls-1 {
+    fill: var(--orange);
+}
+
+/* color de barras abajo de botones del navbar hover */
+
+header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1 {
+    fill: var(--orange);
+}
+
+
+.menu-cls-1 {
+    fill: none;
+    stroke: #e84926;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+}
 
 
 
@@ -371,7 +468,11 @@ header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1  
     color: var(--gray-dark);
 }
 
-.nav-botton-container button:nth-child(1):hover a, .nav-botton-container button:nth-child(2):hover a,.nav-botton-container button:nth-child(3):hover a,.nav-botton-container button:nth-child(4):hover a,.nav-botton-container button:nth-child(6):hover a {
+.nav-botton-container button:nth-child(1):hover a,
+.nav-botton-container button:nth-child(2):hover a,
+.nav-botton-container button:nth-child(3):hover a,
+.nav-botton-container button:nth-child(4):hover a,
+.nav-botton-container button:nth-child(6):hover a {
     color: var(--orange);
 }
 
@@ -394,11 +495,11 @@ header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1  
 
 header .nav-logos-inv {
     position: relative;
-    width: 32px;
+    width: 2%;
 }
 
 header .nav-logos-inv .g-dartia-cls-1 {
-    fill:transparent;
+    fill: transparent;
 }
 
 header .nav-logos-inv .g-dartia-cls-2 {
@@ -419,7 +520,7 @@ header.abajo .nav-logos-inv .g-dartia-cls-2 {
 }
 
 header.abajo .nav-logos-inv .g-dartia-cls-3 {
-    stroke:var(--text-input-field);
+    stroke: var(--text-input-field);
 }
 
 header.abajo .nav-logos-inv:hover .g-dartia-cls-2 {
@@ -427,12 +528,8 @@ header.abajo .nav-logos-inv:hover .g-dartia-cls-2 {
 }
 
 header.abajo .nav-logos-inv:hover .g-dartia-cls-3 {
-    stroke:var(--orange);
+    stroke: var(--orange);
 }
-
-
-
-
 
 
 
@@ -444,6 +541,7 @@ header.abajo .nav-logos-inv:hover .g-dartia-cls-3 {
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 150px 300px 180px 520px 100px 600px;
     height: 100%;
+    width: 100%;
     /* background-image: url('../img/bg-main.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
@@ -568,7 +666,6 @@ header.abajo .nav-logos-inv:hover .g-dartia-cls-3 {
 }
 
 .home-title-container :nth-child(2) h1 {
-
     font-size: var(--xxl);
     color: var(--gray-dark);
     letter-spacing: var(--letterspa_md);
@@ -580,25 +677,12 @@ header.abajo .nav-logos-inv:hover .g-dartia-cls-3 {
     letter-spacing: var(--letterspa_md);
 }
 
-.rectangulo-naranja {
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
-    height: 100%;
-    background-color: var(--orange);
-}
 
-.rectangulo-gris {
-    grid-column: 3;
-    grid-row: 2;
-    width: 100%;
-    height: 100%;
-    background-color: var(--gray-dark);
-}
 
 main .home-services-container {
     display: grid;
-    grid-column: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
     grid-row: 2;
     grid-template-columns: 4fr 1fr 4fr;
     text-align: center;
@@ -606,16 +690,14 @@ main .home-services-container {
 }
 
 .paralelogramo-orange {
-    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
     display: grid;
     place-content: center;
     width: 100%;
-    /* Ancho del rectángulo */
     height: 100%;
-    /* Alto del rectángulo */
-    background-color: var(--orange);
-    /* Color de fondo */
-    /* clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%, 0% 0%); */
+    background: var(--orange);
+
 }
 
 .paralelogramo-orange a {
@@ -630,6 +712,13 @@ main .home-services-container {
     transition: display 1s;
 }
 
+.paralelogramo-orange:hover img {
+    opacity: 1;
+    /* Ajusta el valor de duración de la transición */
+    transition: opacity 3s;
+    display: block;
+}
+
 .paralelogramo-orange img {
     width: 100%;
     height: 100%;
@@ -638,25 +727,22 @@ main .home-services-container {
     display: none;
 }
 
-.paralelogramo-orange:hover img {
-    opacity: 1;
-    /* Ajusta el valor de duración de la transición */
-    transition: opacity 3s;
-    display: block;
-}
 
 
 .izquierdo {
-    grid-column: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
     width: 0;
     height: 0;
     border-top: 300px solid var(--orange);
-    border-right: 150px solid var(--gray-dark);
+    border-right: 250px solid var(--gray-dark);
 }
+
 
 .paralelogramo-gray {
     display: grid;
-    grid-column: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     place-content: center;
     width: 100%;
     /* Ancho del rectángulo */
@@ -674,7 +760,7 @@ main .home-services-container {
 
 }
 
-.paralelogramo-gray:hover a{
+.paralelogramo-gray:hover a {
     display: none;
 }
 
@@ -688,7 +774,8 @@ main .home-services-container {
 
 .paralelogramo-gray:hover img {
     opacity: 1;
-    transition: opacity 3s; /* Ajusta el valor de duración de la transición */
+    transition: opacity 3s;
+    /* Ajusta el valor de duración de la transición */
     display: block;
     background-image: cover;
 }
@@ -702,8 +789,6 @@ main .home-services-container {
     grid-column-end: 4;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-
 
 
 .home-tienda-container div:nth-child(1) {
@@ -824,17 +909,17 @@ main .home-services-container {
 }
 
 .home-tienda-container div:nth-child(2):hover a {
-    
+
     transform: translateY(15px);
     transition: transform 0.8s;
 }
 
-.home-tienda-container .tienda-bar-cls-1{
+.home-tienda-container .tienda-bar-cls-1 {
     fill: var(--gray-dark);
 
 }
 
-.home-tienda-container:hover .tienda-bar-cls-1{
+.home-tienda-container:hover .tienda-bar-cls-1 {
     fill: var(--orange);
 }
 
@@ -906,6 +991,7 @@ main .home-tienda-container-topproductos {
     background-color: var(--gray-ligh);
     place-items: center;
     padding: 20px;
+    grid-row: 1fr;
 }
 
 .home-tienda-container-topproductos .home-tienda-container-one h2 {
@@ -925,6 +1011,7 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-two {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-row: 1fr;
     place-items: center;
     padding: 10px;
 }
@@ -959,6 +1046,7 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-three {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-row: 1fr;
     place-items: center;
     align-items: center;
     padding: 10px;
@@ -993,6 +1081,7 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-four {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-row: 1fr;
     place-items: center;
     padding: 10px;
     background-color: var(--gray-ligh);
@@ -1093,7 +1182,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr repeat(5, 1fr) 2fr;
     width: 100%;
-    height: 150px;
+    height: 100%;
     background-color: var(--orange);
 }
 
@@ -1116,7 +1205,7 @@ footer .main-div2-container {
     width: 100%;
     height: 150px;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
 }
 

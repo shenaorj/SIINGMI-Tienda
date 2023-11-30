@@ -1,0 +1,244 @@
+:root {
+    --dark-brown: #a54a38;
+    --light-brown: #bf624c;
+    --dark-green: #51af5e;
+    --light-green: #51af5e;
+    --shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
+        0 15px 12px rgba(0, 0, 0, 0.22);
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-ligh-organge: #F9EFED;
+        --text-input-field: #F4F4F4;
+        --orange: #E84926;
+        --gray-dark: #929191;
+        --gray-dark-opacity: rgba(146, 145, 145, 0.95);
+        --gray-ligh: #BCBCBB;
+        --sm: 8px;
+        --md: 12px;
+        --lg: 16px;
+        --xl: 20px;
+        --xxl: 24px;
+        --XXXl: 44px;
+        --letterspa_big: 3.98px;
+        --letterspa_md: 3.6px;
+        --letterspa_sm: 2px;
+        --letterspa_xsm: 1px;
+}
+
+
+
+body {
+    font-family: 'Avenir-Light';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    counter-reset: score;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    width: 100%;
+  }
+
+
+.entry {
+    text-align: center;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.entry.short {
+    min-height: 320px
+}
+
+.entry.tall {
+    min-height: 450px
+}
+
+.entry div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.entry div:before,.entry div:after {
+    display: block;
+    content: '';
+    position: absolute
+}
+
+
+.entry {
+    width: 100%
+}
+
+@media (max-width: 400px) {
+    .entry div:not(.no-scale) {
+        transform:scale(.8)
+    }
+}
+
+@media all and (min-width: 650px) and (max-width:959px) {
+    .entry {
+        width:100%;
+    }
+
+    .entry.fours,.entry.six {
+        width: 50%
+    }
+}
+
+@media all and (min-width: 960px) {
+    .entry {
+        width:50%;
+    }
+
+    .entry.wide {
+        width: 100%
+    }
+
+    .entry.threes {
+        width: 33.333%
+    }
+
+    .entry.fours {
+        width: 25%
+    }
+
+    .entry.six {
+        width: 33.333%
+    }
+}
+
+
+
+#component {
+   width: 100%;
+}
+
+#component div {
+    width: 100%;
+    left: 0;
+    top: 60%;
+}
+
+#component div::before,#component div::after {
+    width: calc(100% + 60em)
+}
+
+#component div::before {
+    top: -2.9em;
+    left: -40em;
+    animation: component 3s ease-in-out infinite alternate-reverse;
+    --component-y: -1.3em;
+}
+
+@media (prefers-reduced-motion) {
+    #component div::before {
+        animation: none;
+        top: -5em;
+        left: -25em
+    }
+}
+
+#component div::after {
+    top: -5.8em;
+    left: -60em;
+    animation: component 3s ease-in-out infinite alternate;
+    --component-y: -2.6em;
+}
+
+@media (prefers-reduced-motion) {
+    #component div::after {
+        animation: none;
+        top: -10em
+    }
+}
+
+#component div,#component div::before,#component div::after {
+    height: 3.5em;
+    background: linear-gradient(to right,#8b0000 10%,transparent 10%) 10em 15%/70em 3% , linear-gradient(to right,#8b0000 10%,transparent 10%) 10em 100%/70em 2% , linear-gradient(to right,#8b0000 .1%,transparent .1% 9.9%,#8b0000 9.9% 10%,transparent 10%) 10em 100%/70em 85% , linear-gradient(to right,#d31339 2%,#dc143c,#c91237 10%,transparent 10%) 10em 100%/70em 85% , linear-gradient(to right,transparent .7%,#8b0000 .7% 2.7%,transparent 2.7% 4%,#8b0000 4% 6%,transparent 6% 7.3%,#8b0000 7.3% 9.3%,transparent 9.3%) 10em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#8b0000 2.6% 2.7%,transparent 2.7% 5.9%,#8b0000 5.9% 6%,transparent 6% 9.2%,#8b0000 9.2% 9.3%,transparent 9.3%) 10em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 10em 100%/70em 100% , linear-gradient(to right,transparent .7%,#8b0000 .7%,#dc143c 1.9%,#ad102f 2.7%,transparent 2.7% 4%,#8b0000 4%,#dc143c 5.2%,#ad102f 6%,transparent 6% 7.3%,#8b0000 7.3%,#dc143c 8.5%,#ad102f 9.3%,transparent 9.3%) 10em 100%/70em 100%,linear-gradient(to right,#0000cd 10%,transparent 10%) 20em 15%/70em 3% , linear-gradient(to right,#0000cd 10%,transparent 10%) 20em 100%/70em 2% , linear-gradient(to right,#0000cd .1%,transparent .1% 9.9%,#0000cd 9.9% 10%,transparent 10%) 20em 100%/70em 85% , linear-gradient(to right,#3862e0 2%,#4169e1,#2f5bde 10%,transparent 10%) 20em 100%/70em 85% , linear-gradient(to right,transparent .7%,#0000cd .7% 2.7%,transparent 2.7% 4%,#0000cd 4% 6%,transparent 6% 7.3%,#0000cd 7.3% 9.3%,transparent 9.3%) 20em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#0000cd 2.6% 2.7%,transparent 2.7% 5.9%,#0000cd 5.9% 6%,transparent 6% 9.2%,#0000cd 9.2% 9.3%,transparent 9.3%) 20em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 20em 100%/70em 100% , linear-gradient(to right,transparent .7%,#0000cd .7%,#4169e1 1.9%,#214cce 2.7%,transparent 2.7% 4%,#0000cd 4%,#4169e1 5.2%,#214cce 6%,transparent 6% 7.3%,#0000cd 7.3%,#4169e1 8.5%,#214cce 9.3%,transparent 9.3%) 20em 100%/70em 100%,linear-gradient(to right,#008000 10%,transparent 10%) 30em 15%/70em 3% , linear-gradient(to right,#008000 10%,transparent 10%) 30em 100%/70em 2% , linear-gradient(to right,#008000 .1%,transparent .1% 9.9%,#008000 9.9% 10%,transparent 10%) 30em 100%/70em 85% , linear-gradient(to right,#39ab6c 2%,#3cb371,#37a467 10%,transparent 10%) 30em 100%/70em 85% , linear-gradient(to right,transparent .7%,#008000 .7% 2.7%,transparent 2.7% 4%,#008000 4% 6%,transparent 6% 7.3%,#008000 7.3% 9.3%,transparent 9.3%) 30em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#008000 2.6% 2.7%,transparent 2.7% 5.9%,#008000 5.9% 6%,transparent 6% 9.2%,#008000 9.2% 9.3%,transparent 9.3%) 30em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 30em 100%/70em 100% , linear-gradient(to right,transparent .7%,#008000 .7%,#3cb371 1.9%,#2f8d59 2.7%,transparent 2.7% 4%,#008000 4%,#3cb371 5.2%,#2f8d59 6%,transparent 6% 7.3%,#008000 7.3%,#3cb371 8.5%,#2f8d59 9.3%,transparent 9.3%) 30em 100%/70em 100%,linear-gradient(to right,#ff6347 10%,transparent 10%) 40em 15%/70em 3% , linear-gradient(to right,#ff6347 10%,transparent 10%) 40em 100%/70em 2% , linear-gradient(to right,#ff6347 .1%,transparent .1% 9.9%,#ff6347 9.9% 10%,transparent 10%) 40em 100%/70em 85% , linear-gradient(to right,#f58600 2%,#ff8c00,#eb8100 10%,transparent 10%) 40em 100%/70em 85% , linear-gradient(to right,transparent .7%,#ff6347 .7% 2.7%,transparent 2.7% 4%,#ff6347 4% 6%,transparent 6% 7.3%,#ff6347 7.3% 9.3%,transparent 9.3%) 40em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#ff6347 2.6% 2.7%,transparent 2.7% 5.9%,#ff6347 5.9% 6%,transparent 6% 9.2%,#ff6347 9.2% 9.3%,transparent 9.3%) 40em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 40em 100%/70em 100% , linear-gradient(to right,transparent .7%,#ff6347 .7%,#ff8c00 1.9%,#cc7000 2.7%,transparent 2.7% 4%,#ff6347 4%,#ff8c00 5.2%,#cc7000 6%,transparent 6% 7.3%,#ff6347 7.3%,#ff8c00 8.5%,#cc7000 9.3%,transparent 9.3%) 40em 100%/70em 100%,linear-gradient(to right,#bbb 10%,transparent 10%) 50em 15%/70em 3% , linear-gradient(to right,#bbb 10%,transparent 10%) 50em 100%/70em 2% , linear-gradient(to right,#bbb .1%,transparent .1% 9.9%,#bbb 9.9% 10%,transparent 10%) 50em 100%/70em 85% , linear-gradient(to right,#e9e9e9 2%,#eee,#e4e4e4 10%,transparent 10%) 50em 100%/70em 85% , linear-gradient(to right,transparent .7%,#bbb .7% 2.7%,transparent 2.7% 4%,#bbb 4% 6%,transparent 6% 7.3%,#bbb 7.3% 9.3%,transparent 9.3%) 50em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#bbb 2.6% 2.7%,transparent 2.7% 5.9%,#bbb 5.9% 6%,transparent 6% 9.2%,#bbb 9.2% 9.3%,transparent 9.3%) 50em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 50em 100%/70em 100% , linear-gradient(to right,transparent .7%,#bbb .7%,#eee 1.9%,#d4d4d4 2.7%,transparent 2.7% 4%,#bbb 4%,#eee 5.2%,#d4d4d4 6%,transparent 6% 7.3%,#bbb 7.3%,#eee 8.5%,#d4d4d4 9.3%,transparent 9.3%) 50em 100%/70em 100%,linear-gradient(to right,#daa520 10%,transparent 10%) 60em 15%/70em 3% , linear-gradient(to right,#daa520 10%,transparent 10%) 60em 100%/70em 2% , linear-gradient(to right,#daa520 .1%,transparent .1% 9.9%,#daa520 9.9% 10%,transparent 10%) 60em 100%/70em 85% , linear-gradient(to right,#f5ce00 2%,#ffd700,#ebc600 10%,transparent 10%) 60em 100%/70em 85% , linear-gradient(to right,transparent .7%,#daa520 .7% 2.7%,transparent 2.7% 4%,#daa520 4% 6%,transparent 6% 7.3%,#daa520 7.3% 9.3%,transparent 9.3%) 60em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#daa520 2.6% 2.7%,transparent 2.7% 5.9%,#daa520 5.9% 6%,transparent 6% 9.2%,#daa520 9.2% 9.3%,transparent 9.3%) 60em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 60em 100%/70em 100% , linear-gradient(to right,transparent .7%,#daa520 .7%,#ffd700 1.9%,#ccac00 2.7%,transparent 2.7% 4%,#daa520 4%,#ffd700 5.2%,#ccac00 6%,transparent 6% 7.3%,#daa520 7.3%,#ffd700 8.5%,#ccac00 9.3%,transparent 9.3%) 60em 100%/70em 100%,linear-gradient(to right,#639 10%,transparent 10%) 70em 15%/70em 3% , linear-gradient(to right,#639 10%,transparent 10%) 70em 100%/70em 2% , linear-gradient(to right,#639 .1%,transparent .1% 9.9%,#639 9.9% 10%,transparent 10%) 70em 100%/70em 85% , linear-gradient(to right,#8d68d9 2%,#9370db,#8760d7 10%,transparent 10%) 70em 100%/70em 85% , linear-gradient(to right,transparent .7%,#639 .7% 2.7%,transparent 2.7% 4%,#639 4% 6%,transparent 6% 7.3%,#639 7.3% 9.3%,transparent 9.3%) 70em 0/70em 2.5% , linear-gradient(to right,transparent 2.6%,#639 2.6% 2.7%,transparent 2.7% 5.9%,#639 5.9% 6%,transparent 6% 9.2%,#639 9.2% 9.3%,transparent 9.3%) 70em 100%/70em 100% , linear-gradient(to right,rgba(255,255,255,0) 1.2%,rgba(255,255,255,0.3) 1.5%,rgba(255,255,255,0) 1.7%,rgba(255,255,255,0.3) 2%,rgba(255,255,255,0) 2.3% 4.5%,rgba(255,255,255,0.3) 4.8%,rgba(255,255,255,0) 5%,rgba(255,255,255,0.3) 5.3%,rgba(255,255,255,0) 5.6% 7.8%,rgba(255,255,255,0.3) 8.1%,rgba(255,255,255,0) 8.3%,rgba(255,255,255,0.3) 8.6%,rgba(255,255,255,0) 8.9%) 70em 100%/70em 100% , linear-gradient(to right,transparent .7%,#639 .7%,#9370db 1.9%,#7447d1 2.7%,transparent 2.7% 4%,#639 4%,#9370db 5.2%,#7447d1 6%,transparent 6% 7.3%,#639 7.3%,#9370db 8.5%,#7447d1 9.3%,transparent 9.3%) 70em 100%/70em 100%;
+    background-repeat: repeat-x
+}
+
+@-moz-keyframes component {
+    0%,30% {
+        transform: translate(0,0)
+    }
+
+    45% {
+        transform: translate(0,var(--component-y))
+    }
+
+    55% {
+        transform: translate(10em,var(--component-y))
+    }
+
+    70%,100% {
+        transform: translate(10em,0)
+    }
+}
+
+@-webkit-keyframes component {
+    0%,30% {
+        transform: translate(0,0)
+    }
+
+    45% {
+        transform: translate(0,var(--component-y))
+    }
+
+    55% {
+        transform: translate(10em,var(--component-y))
+    }
+
+    70%,100% {
+        transform: translate(10em,0)
+    }
+}
+
+@-o-keyframes component {
+    0%,30% {
+        transform: translate(0,0)
+    }
+
+    45% {
+        transform: translate(0,var(--component-y))
+    }
+
+    55% {
+        transform: translate(10em,var(--component-y))
+    }
+
+    70%,100% {
+        transform: translate(10em,0)
+    }
+}
+
+@keyframes component {
+    0%,30% {
+        transform: translate(0,0)
+    }
+
+    45% {
+        transform: translate(0,var(--component-y))
+    }
+
+    55% {
+        transform: translate(10em,var(--component-y))
+    }
+
+    70%,100% {
+        transform: translate(10em,0)
+    }
+}
+
+
+section div:nth-child(1) h1 {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+    color: var(--orange);
+}
