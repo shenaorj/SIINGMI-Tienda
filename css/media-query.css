@@ -21,11 +21,12 @@
     --letterspa_xsm: 1px;
 }
 
-
-
-@media screen and (min-width: 1441px) {}
-
-
+@media screen and (max-width: 1440px) {
+    header  {
+        margin-top: 0;
+    }
+   
+}
 
 @media screen and (max-width: 1250px) {
     header .nav-logo-container {
@@ -145,26 +146,53 @@
 }
 
 @media screen and (max-width: 1024px) {
-
     header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        padding: 0;
-        place-content: center;
+        display: flex;
+        align-items: center;
     }
     nav {
        display: none;
     }
+    header .contenedor-mobile-menu {
+        display: flex;
+        align-items: center;
+        padding-left: 3%;
+        order: 1;
+        width: max-content;
+    }
+    header .nav-logo-container {
+        display: flex;
+        width: max-content;
+        order: 2;
+    }
+
+    header .contenedor-mobile-menu a svg {
+       width: 15%;
+    }
+
+    header .nav-logos-inv {
+        order: 3;
+        display: flex;
+        justify-content: flex-end;
+        width: max-content;
+       
+    }
 
     header .nav-logo-container img:nth-child(3) {
-        display: none;
-    }
-    header.abajo .nav-logo-container img:nth-child(4) {
-        display: none;
+        width: 25%;
+        
     }
 
+    header .nav-logos-inv svg {
+        width: 10%;
+        padding-right: 5%;
+    }
 
+    header.abajo .menu-cls-1 {
+        fill: none;
+        stroke: white;
+       
+    }
 
     .home-main {
 
@@ -241,15 +269,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    header .contenedor-mobile-menu a svg {
-        width: 30px;
-
-    }
-
-    header .nav-logos-inv a svg {
-        width: 30px;
-    }
 
 
     main .home-services-container {
@@ -348,19 +367,6 @@
         margin: 0;
     }
 
-    header .contenedor-mobile-menu a svg {
-        width: 25px;
-        top: 34%;
-        left: 2%;
-    }
-
-    header .nav-logos-inv {
-        left: 86%;
-    }
-
-    header .nav-logos-inv a svg {
-        width: 25px;
-    }
 
     main .home-title-container {
         width: 100%;

@@ -28,7 +28,11 @@
 
 @font-face {
     font-family: 'Avenir-Light';
-    src: url('../fonts/Avenir_LT_35_Light_Regular.ttf');
+    src: url('../fonts/Avenir_LT_35_Light_Regular.ttf') format('tff');
+    font-weight: 300;
+    /* Puedes ajustar esto según la variante de la fuente */
+    font-style: normal;
+    /* Puedes ajustar esto según la variante de la fuente */
 }
 
 @font-face {
@@ -44,7 +48,7 @@
 
 
 body {
-    font-family: 'Avenir-Light';
+    font-family: 'Avenir-Light', 'Avenir Next LT Pro', 'Avenir Next', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -96,8 +100,9 @@ header {
     transition: 1s;
     z-index: 10;
     align-items: center;
-    height: 100px;
+    height: 110px;
     justify-content: space-around;
+    margin-top: 10px;
 }
 
 /* section 1 logos */
@@ -113,7 +118,7 @@ header .nav-logo-container {
 
 /* logo registrado naranja*/
 header .nav-logo-container img:nth-child(1) {
-    width: 70%;
+    width: 60%;
 }
 
 header.abajo .nav-logo-container img:nth-child(1) {
@@ -123,9 +128,10 @@ header.abajo .nav-logo-container img:nth-child(1) {
 header .nav-logo-container img:nth-child(2) {
     display: none;
 }
+
 /* logo registrado blanco*/
 header.abajo .nav-logo-container img:nth-child(2) {
-    width: 70%;
+    width: 60%;
     display: block;
 }
 
@@ -133,13 +139,13 @@ header.abajo .nav-logo-container img:nth-child(2) {
 header .nav-logo-container img:nth-child(3) {
     width: 45%;
     display: none;
-  }
+}
 
 /* Logo SII pequeño blanco*/
 header .nav-logo-container img:nth-child(4) {
-    width: 45%;    
+    width: 45%;
     display: none;
-    
+
 }
 
 
@@ -148,13 +154,15 @@ header .nav-logo-container img:nth-child(4) {
 nav {
     width: 60%;
 }
+
 nav .nav-botton-container {
     display: flex;
     margin-top: 10px;
 }
+
 header .contenedor-mobile-menu {
     width: 50%;
-    height: 40px;
+
     display: none;
 }
 
@@ -284,7 +292,7 @@ header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1 {
     grid-template-rows: 1fr 1fr;
     margin: 0;
     padding: 0;
-    width: 160px;
+    width: 70%;
 }
 
 .name-menus-nav {
@@ -332,10 +340,11 @@ header .nav-logos-inv {
     display: flex;
     width: 10%;
     justify-content: center;
+
 }
 
 header .nav-logos-inv svg {
-    width: 30%;
+    width: 25%;
 }
 
 
@@ -372,19 +381,16 @@ header.abajo .nav-logos-inv:hover .g-dartia-cls-3 {
     stroke: var(--orange);
 }
 
-
-
-
 /* main */
 
 .home-main {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-rows: 150px 300px 180px 520px 100px 600px;
+    grid-template-rows: 200px 300px 200px 800px 250px 600px;
     height: 100%;
     width: 100%;
     place-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .home-tittle-papeltapiz1 {
@@ -620,10 +626,12 @@ main .home-services-container {
 
 /* tienda */
 .home-tienda-container {
+    grid-row: 3;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 
@@ -808,6 +816,7 @@ main .home-services-container {
 }
 
 main .home-tienda-container-topproductos {
+    grid-row: 4;
     width: 100%;
     height: 500px;
     display: grid;
@@ -1026,7 +1035,6 @@ footer .main-div1-container {
     margin-bottom: 0;
     margin-top: 0;
     display: grid;
-
 }
 
 .main-div1-container img {
@@ -1040,14 +1048,12 @@ footer .main-div2-container {
     height: 150px;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-
 }
 
 .main-logito-img {
     margin: 5px 0 5px;
     padding: 0;
     width: 80%;
-
 }
 
 .main-div2-container h3 {
@@ -1075,8 +1081,6 @@ footer .main-div2-container {
     width: 30px;
     border-right: 2px solid var(--very-ligh-organge);
     place-content: center;
-
-
 }
 
 .main-div2-container a img {
