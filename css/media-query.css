@@ -23,110 +23,45 @@
 
 
 
-@media screen and (min-width: 1700px) {
-    main .home-gdartia-container {
-        height: 200px;
-        margin-top: 20px;
-    }
-
-    .izquierdo {
-        border-right: 300px solid var(--gray-dark);
-    }
+@media screen and (min-width: 1441px) {}
 
 
-}
 
-@media screen and (max-width: 1346px) {
-
+@media screen and (max-width: 1250px) {
     header .nav-logo-container {
-        width: 100%;
-        left: 40px;
+        width: 20%;
     }
-
-    header .nav-logo-container a svg {
-        width: 44px;
-        height: 44px;
-    }
-
-    header .nav-logos-inv {
-        width: 100%;
-        justify-items: center;
-        left: 5%;
-
-    }
-
-    header .nav-logos-inv a svg {
-        width: 35px;
-        height: 35px;
-    }
-
-    header .nav-logo-container a:nth-child(1) {
+   
+    header .nav-logo-container img:nth-child(1) {
         display: none;
     }
-
-    header .nav-logo-container a:nth-child(2) {
+    header .nav-logo-container img:nth-child(3) {
         display: block;
-        width: 30%;
     }
-
-}
-
-@media screen and (max-width: 1200px) {
-
-    header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        padding: 0;
-        place-content: center;
-
-    }
-
-    header .nav-logo-container {
+    header.abajo .nav-logo-container img:nth-child(2) {
         display: none;
+    }
+    header.abajo .nav-logo-container img:nth-child(3) {
+        display: none;
+    }
+    header.abajo .nav-logo-container img:nth-child(4) {
+        display: block;
     }
 
     nav {
-        display: none;
-    }
-
-    header .nav-logo-container a:nth-child(2) {
-        display: none;
-    }
-
-    header .contenedor-mobile-menu {
-        width: 100%;
-        grid-column: 1;
-        display: block;
-    }
-
-    header .contenedor-mobile-menu .menu {
-        width: 20%;
-        height: 100%;
-
-    }
-
-    header .contenedor-mobile-menu a svg {
-        width: 40px;
-        position: absolute;
-        left: 1%;
-        top: 32%;
+        width: 70%;
     }
 
     header .nav-logos-inv {
-        grid-column: 2;
-        width: 100%;
-        left: 88%;
-
+        width: 10%;
+      
     }
-
-    header .nav-logos-inv a svg {
-        width: 40px;
+    
+    header .nav-logos-inv svg {
+        width: 28%;
     }
-
-    header.abajo .menu-cls-1 {
-        stroke: var(--white);
-    }
+    
+    
     .home-main {
         grid: flex;
     }
@@ -208,6 +143,63 @@
         grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
 }
+
+@media screen and (max-width: 1024px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        padding: 0;
+        place-content: center;
+    }
+    nav {
+       display: none;
+    }
+
+    header .nav-logo-container img:nth-child(3) {
+        display: none;
+    }
+    header.abajo .nav-logo-container img:nth-child(4) {
+        display: none;
+    }
+
+
+
+    .home-main {
+
+        grid-template-rows: 150px 300px 180px 1100px 100px 600px;
+
+    }
+
+    .home-tienda-container-topproductos .home-tienda-container-four {
+        grid-row: 3;
+    }
+
+    main .home-gdartia-banner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+    }
+
+    .home-gdartia-banner div:nth-child(1) {
+        grid-row: 1;
+    }
+
+    .home-gdartia-banner div:nth-child(2) img {
+        grid-row: 2;
+    }
+
+
+    footer {
+        grid-template-columns: 1fr 2fr repeat(4, 1fr) 2fr;
+    }
+
+    footer div:nth-child(7) {
+        display: none;
+    }
+
+}
+
 
 @media screen and (max-width: 1000px) {
 
@@ -294,9 +286,11 @@
     .home-main {
         grid-template-rows: 150px 300px 180px 800px 100px 600px;
     }
+
     .paralelogramo-orange:hover a {
         display: block;
     }
+
     .paralelogramo-orange:hover img {
         display: none;
     }
@@ -304,6 +298,7 @@
     .paralelogramo-gray:hover a {
         display: block;
     }
+
     .paralelogramo-gray:hover img {
         display: none;
     }
@@ -314,11 +309,12 @@
     .home-main .home-services-container {
         display: flex;
     }
+
     .home-services-container .paralelogramo-gray {
-      display: grid;
+        display: grid;
     }
 
- 
+
     footer {
         grid-template-columns: 2fr repeat(3, 1fr) 2fr;
     }
@@ -336,27 +332,28 @@
 
 
 @media screen and (max-width: 520px) {
-  .home-main {
-    place-content: normal;
-    grid-template-columns: 1fr;
-    grid-template-rows: 105px 300px 150px 750px 150px 600px;
-    width: 100%;
-  }
+    .home-main {
+        place-content: normal;
+        grid-template-columns: 1fr;
+        grid-template-rows: 105px 300px 150px 750px 150px 600px;
+        width: 100%;
+    }
 
-  .home-main home-title-container {
-    grid-row: 1;
+    .home-main home-title-container {
+        grid-row: 1;
 
-  }
+    }
 
-  .home-main home-gdartia-banner {
-    margin: 0;
-  }
-    
+    .home-main home-gdartia-banner {
+        margin: 0;
+    }
+
     header .contenedor-mobile-menu a svg {
         width: 25px;
         top: 34%;
         left: 2%;
     }
+
     header .nav-logos-inv {
         left: 86%;
     }
@@ -364,15 +361,16 @@
     header .nav-logos-inv a svg {
         width: 25px;
     }
+
     main .home-title-container {
-      width: 100%;
+        width: 100%;
     }
 
     .section-main-one {
         padding-right: 0;
         width: 100%;
     }
-    
+
     .section-main-two {
         padding-left: 0;
     }
@@ -380,23 +378,27 @@
     .home-title-container .section-main-one h1 {
         width: 100%;
         font-size: var(--lg);
-        
-    }
-    .home-title-container .section-main-one h3 {
-        font-size: var(--md); 
-    }
-    .home-title-container .section-main-two h1 {
-        font-size: var(--lg);
-        
-    }
-    .home-title-container .section-main-two h3 {
-        font-size: var(--md); 
+
     }
 
-    .paralelogramo-orange a{
+    .home-title-container .section-main-one h3 {
+        font-size: var(--md);
+    }
+
+    .home-title-container .section-main-two h1 {
+        font-size: var(--lg);
+
+    }
+
+    .home-title-container .section-main-two h3 {
+        font-size: var(--md);
+    }
+
+    .paralelogramo-orange a {
         font-size: var(--xxxlm);
     }
-    .paralelogramo-gray a{
+
+    .paralelogramo-gray a {
         font-size: var(--xxxlm);
     }
 
@@ -406,12 +408,13 @@
         font-size: var(--xl);
         padding-top: 10px;
     }
+
     .home-tienda-container div:nth-child(2) h4 {
         font-size: var(--md);
-        
+
     }
 
-    .home-gdartia-banner  img {
+    .home-gdartia-banner img {
         scale: 0.7;
 
     }
@@ -426,10 +429,12 @@
         height: 100%;
     }
 
-    footer div:nth-child(4), div:nth-child(5), div:nth-child(6) {
+    footer div:nth-child(4),
+    div:nth-child(5),
+    div:nth-child(6) {
         display: none;
-    }   
-   
+    }
+
 
 
 }

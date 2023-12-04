@@ -23,16 +23,19 @@
 .inactive {
     display: none;
 }
+
 /* fuente SIINGMI */
 
 @font-face {
     font-family: 'Avenir-Light';
     src: url('../fonts/Avenir_LT_35_Light_Regular.ttf');
 }
+
 @font-face {
     font-family: 'Avenir Next LT Pro';
-    src: url('../fonts/AvNextLTPro-Regular.otf');
+    src: url('../fonts/AvenirNextLTPro-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Avenir Next';
     src: url('../fonts/AvenirNext-DemiBold.otf');
@@ -50,6 +53,7 @@ body {
     left: 0;
     right: 0;
 }
+
 /* ws flotting botton */
 
 .btn-wsp {
@@ -97,48 +101,62 @@ header {
 }
 
 /* section 1 logos */
-
 header .nav-logo-container {
     position: relative;
-    width: 100%;
+    display: flex;
     height: 100%;
-    top: 10%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+
 }
 
-/* logo registrado */
-header .nav-logo-container a:nth-child(1) {
-    width: 50%;
-    height: 40px;
+/* logo registrado naranja*/
+header .nav-logo-container img:nth-child(1) {
+    width: 70%;
 }
 
-/* Logo SII pequeño */
-header .nav-logo-container a:nth-child(2) {
-    width: 50%;
-    height: 40px;
+header.abajo .nav-logo-container img:nth-child(1) {
     display: none;
 }
+
+header .nav-logo-container img:nth-child(2) {
+    display: none;
+}
+/* logo registrado blanco*/
+header.abajo .nav-logo-container img:nth-child(2) {
+    width: 70%;
+    display: block;
+}
+
+/* Logo SII pequeño naranja */
+header .nav-logo-container img:nth-child(3) {
+    width: 45%;
+    display: none;
+  }
+
+/* Logo SII pequeño blanco*/
+header .nav-logo-container img:nth-child(4) {
+    width: 45%;    
+    display: none;
+    
+}
+
 
 /* Navbar (general) */
 
 nav {
-    position: relative;
-    align-items: center;
+    width: 60%;
 }
-
-
 nav .nav-botton-container {
     display: flex;
     margin-top: 10px;
 }
-
-
-
 header .contenedor-mobile-menu {
     width: 50%;
     height: 40px;
     display: none;
 }
-
 
 .inactive {
     display: none;
@@ -159,9 +177,9 @@ header .contenedor-mobile-menu {
 }
 
 header.abajo .mobile-menu {
-    background-color: var( --gray-dark-opacity);
+    background-color: var(--gray-dark-opacity);
     transition-duration: 1.2s;
-  
+
 }
 
 .mobile-menu a {
@@ -198,170 +216,6 @@ header.abajo .mobile-menu a {
 }
 
 
-.sii-r-cls-1 {
-    fill: #979797;
-}
-
-.sii-r-cls-2 {
-    font-family: AvenirNext-DemiBold, 'Avenir Next';
-    font-size: 11.7px;
-    font-weight: 300;
-}
-
-.sii-r-cls-2,
-.sii-r-cls-3 {
-    fill: #888b8d;
-}
-
-.sii-r-cls-4 {
-    letter-spacing: .65em;
-}
-
-.sii-r-cls-5,
-.sii-r-cls-6 {
-    fill: #e84926;
-}
-
-.sii-r-cls-7 {
-    opacity: .2;
-}
-
-.sii-r-cls-6 {
-    font-family: AvenirNextLTPro-Bold, 'Avenir Next LT Pro';
-    font-size: 21.59px;
-    font-weight: 700;
-}
-
-.sii-r-cls-8 {
-    letter-spacing: .68em;
-}
-
-.sii-r-cls-9 {
-    letter-spacing: .68em;
-}
-
-.sii-r-cls-10 {
-    fill: #e94a28;
-}
-
-.sii-r-cls-11 {
-    letter-spacing: .68em;
-}
-
-.sii-r-cls-12 {
-    clip-path: url(#clippath);
-}
-
-.sii-r-cls-13 {
-    letter-spacing: .68em;
-}
-
-.sii-r-cls-14,
-.sii-r-cls-15 {
-    fill: none;
-}
-
-.sii-r-cls-16 {
-    letter-spacing: .62em;
-}
-
-.sii-r-cls-17 {
-    fill: #a8a8a8;
-}
-
-.sii-r-cls-15 {
-    stroke: #e94a28;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-}
-
-.sii-r-cls-18 {
-    letter-spacing: .68em;
-}
-
-/* header abajo logo registrado */
-
-header.abajo .sii-r-cls-1 {
-    fill: var(--text-input-field);
-}
-
-header.abajo .sii-r-cls-2 {
-    font-family: AvenirNext-DemiBold, 'Avenir Next';
-    font-size: 11.7px;
-    font-weight: 300;
-}
-
-header.abajo .sii-r-cls-2,
-header.abajo .sii-r-cls-3 {
-    fill: var(--text-input-field);
-}
-
-header.abajo .sii-r-cls-4 {
-    letter-spacing: .65em;
-}
-
-header.abajo .sii-r-cls-5,
-header.abajo .sii-r-cls-6 {
-    fill: var(--text-input-field);
-}
-
-header.abajo .sii-r-cls-7 {
-    opacity: .2;
-}
-
-header.abajo .sii-r-cls-6 {
-    font-family: AvenirNextLTPro-Bold, 'Avenir Next LT Pro';
-    font-size: 21.59px;
-    font-weight: 700;
-}
-
-header.abajo .sii-r-cls-8 {
-    letter-spacing: .68em;
-}
-
-header.abajo .sii-r-cls-9 {
-    letter-spacing: .68em;
-}
-
-header.abajo .sii-r-cls-10 {
-    fill: var(--text-input-field);
-}
-
-header.abajo .sii-r-cls-11 {
-    letter-spacing: .68em;
-}
-
-header.abajo .sii-r-cls-12 {
-    clip-path: url(#clippath);
-}
-
-header.abajo .sii-r-cls-13 {
-    letter-spacing: .68em;
-}
-
-header.abajo .sii-r-cls-14,
-header.abajo .sii-r-cls-15 {
-    fill: none;
-}
-
-header.abajo .sii-r-cls-16 {
-    letter-spacing: .62em;
-}
-
-header.abajo .sii-r-cls-17 {
-    fill: var(--text-input-field);
-}
-
-header.abajo .sii-r-cls-15 {
-    stroke: var(--text-input-field);
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-}
-
-header.abajo .sii-r-cls-18 {
-    letter-spacing: .68em;
-}
-
 
 /* header abajo */
 
@@ -388,27 +242,6 @@ header.abajo .nav-botton-container .identificador-hover-container .cls-1 {
 }
 
 
-
-/* header fijo inicio */
-
-.nav-logo-container .logo-sii-cls-1 {
-
-    fill: #e84926;
-}
-
-.nav-logo-container .logo-sii-cls-2 {
-    fill: #888b8d;
-}
-
-.nav-logo-container .logo-sii-cls-3 {
-    fill: #a8a8a8;
-}
-
-header.abajo .logo-sii-cls-1,
-header.abajo .logo-sii-cls-2,
-header.abajo .logo-sii-cls-3 {
-    fill: var(--text-input-field);
-}
 
 .nav-botton-container .identificador-hover-container .cls-1 {
     fill: var(--gray-dark);
@@ -441,7 +274,7 @@ header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1 {
 }
 
 .logo-gdartia-big {
-    height: 12px;
+    width: 70px;
 }
 
 .botton-nav {
@@ -496,9 +329,15 @@ header.abajo .nav-botton-container .identificador-hover-container:hover .cls-1 {
 /* fijo */
 
 header .nav-logos-inv {
-    position: relative;
-    width: 2%;
+    display: flex;
+    width: 10%;
+    justify-content: center;
 }
+
+header .nav-logos-inv svg {
+    width: 30%;
+}
+
 
 header .nav-logos-inv .g-dartia-cls-1 {
     fill: transparent;
@@ -1128,9 +967,7 @@ main .home-gdartia-container {
 }
 
 .home-gdartia-container img {
-    width: 100%;
-    height: 100%;
-    scale: 60%;
+    width: 50%;
     margin: 0;
 }
 
