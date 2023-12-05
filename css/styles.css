@@ -100,9 +100,9 @@ header {
     transition: 1s;
     z-index: 10;
     align-items: center;
-    height: 110px;
+    height: 135px;
     justify-content: space-around;
-    margin-top: 10px;
+
 }
 
 /* section 1 logos */
@@ -818,7 +818,6 @@ main .home-services-container {
 main .home-tienda-container-topproductos {
     grid-row: 4;
     width: 100%;
-    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -831,12 +830,13 @@ main .home-tienda-container-topproductos {
 
 .home-tienda-container-topproductos .home-tienda-container-one {
     display: flex;
-    display: inline;
     text-align: center;
     background-color: var(--gray-ligh);
     place-items: center;
-    padding: 20px;
     grid-row: 1fr;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-tienda-container-topproductos .home-tienda-container-one h2 {
@@ -856,9 +856,8 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-two {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-row: 1fr;
     place-items: center;
-    padding: 10px;
+  
 }
 
 .home-tienda-container-two section {
@@ -891,10 +890,8 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-three {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-row: 1fr;
     place-items: center;
-    align-items: center;
-    padding: 10px;
+
 }
 
 .home-tienda-container-three section {
@@ -926,9 +923,7 @@ main .home-tienda-container-topproductos {
 .home-tienda-container-topproductos .home-tienda-container-four {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-row: 1fr;
     place-items: center;
-    padding: 10px;
     background-color: var(--gray-ligh);
 }
 
@@ -985,8 +980,6 @@ main .home-gdartia-container {
     margin: 0;
     letter-spacing: var(--letterspa_md);
 }
-
-
 
 main .home-gdartia-banner {
     margin-top: 50px;
