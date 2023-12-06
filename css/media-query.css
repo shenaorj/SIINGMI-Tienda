@@ -22,29 +22,36 @@
 }
 
 @media screen and (max-width: 1440px) {
-    header  {
-        margin-top: 0;
+    header {
+        height: 95px;
     }
-   
+
+    .home-main {
+        grid-template-rows: 200px 300px 200px 800px 140px 600px;
+    }
 }
 
 @media screen and (max-width: 1250px) {
     header .nav-logo-container {
         width: 20%;
     }
-   
+
     header .nav-logo-container img:nth-child(1) {
         display: none;
     }
+
     header .nav-logo-container img:nth-child(3) {
         display: block;
     }
+
     header.abajo .nav-logo-container img:nth-child(2) {
         display: none;
     }
+
     header.abajo .nav-logo-container img:nth-child(3) {
         display: none;
     }
+
     header.abajo .nav-logo-container img:nth-child(4) {
         display: block;
     }
@@ -55,14 +62,14 @@
 
     header .nav-logos-inv {
         width: 10%;
-      
+
     }
-    
+
     header .nav-logos-inv svg {
         width: 28%;
     }
-    
-    
+
+
     .home-main {
         grid: flex;
     }
@@ -140,9 +147,24 @@
         display: none;
     }
 
-    main .home-tienda-container-topproductos {
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    main .home-tienda-container-two {
+        display: flex;
+        flex-direction: column;
     }
+
+    main .home-tienda-container-three {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .home-tienda-container-four {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* main .home-tienda-container-topproductos {
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    } */
 }
 
 @media screen and (max-width: 1024px) {
@@ -150,9 +172,11 @@
         display: flex;
         align-items: center;
     }
+
     nav {
-       display: none;
+        display: none;
     }
+
     header .contenedor-mobile-menu {
         display: flex;
         align-items: center;
@@ -160,6 +184,7 @@
         order: 1;
         width: max-content;
     }
+
     header .nav-logo-container {
         display: flex;
         width: max-content;
@@ -167,7 +192,7 @@
     }
 
     header .contenedor-mobile-menu a svg {
-       width: 15%;
+        width: 15%;
     }
 
     header .nav-logos-inv {
@@ -175,12 +200,12 @@
         display: flex;
         justify-content: flex-end;
         width: max-content;
-       
+
     }
 
     header .nav-logo-container img:nth-child(3) {
         width: 25%;
-        
+
     }
 
     header .nav-logos-inv svg {
@@ -191,7 +216,7 @@
     header.abajo .menu-cls-1 {
         fill: none;
         stroke: white;
-       
+
     }
 
     .home-main {
@@ -200,9 +225,12 @@
 
     }
 
-    .home-tienda-container-topproductos .home-tienda-container-four {
-        grid-row: 3;
+    .home-tienda-container-topproductos {
+        display: flex;
+
     }
+
+
 
     main .home-gdartia-banner {
         grid-template-columns: 1fr;
@@ -240,10 +268,6 @@
 
     }
 
-    .home-tienda-container-topproductos .home-tienda-container-four {
-        grid-row: 3;
-    }
-
     main .home-gdartia-banner {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 3fr;
@@ -274,6 +298,7 @@
     main .home-services-container {
         display: flex;
         flex-direction: column;
+        height: 300px;
     }
 
     main .home-tittle-papeltapiz1 {
@@ -298,12 +323,9 @@
         display: none;
     }
 
-    .home-tienda-container-topproductos div:nth-child(1) img {
-        display: none;
-    }
-
     .home-main {
-        grid-template-rows: 150px 300px 180px 800px 100px 600px;
+        display: flex;
+        flex-direction: column;
     }
 
     .paralelogramo-orange:hover a {
@@ -321,16 +343,149 @@
     .paralelogramo-gray:hover img {
         display: none;
     }
+
+    .home-gdartia-banner img {
+        width: 100%;
+    }
+
+    .home-tienda-container-topproductos .home-tienda-container-one {
+        padding: 10px;
+        order: 1;
+    }
+
+    .home-tienda-container-topproductos .home-tienda-container-two {
+        order: 2;
+    }
+
+    .home-tienda-container-topproductos .home-tienda-container-three {
+        order: 4;
+        flex-direction: column-reverse;
+    }
+
+    .home-tienda-container-topproductos .home-tienda-container-four {
+        order: 3;
+    }
+
+    main .home-tienda-container-topproductos {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    main .home-gdartia-container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    main .home-gdartia-banner {
+        margin-top: 0px;
+    }
+
+    .home-gdartia-banner img {
+        width: 80%;
+    }
+
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
+    header {
+        height: 70px;
+    }
 
+    header .nav-logos-inv svg {
+        width: 12%;
+
+    }
+
+    header.abajo .nav-logo-container img:nth-child(4) {
+        width: 30%;
+    }
+
+    .home-main {
+        margin-top: 100px;
+    }
+
+    .home-title-container {
+
+        margin-bottom: 50px;
+    }
+
+    .home-title-container div:nth-child(1) h1 {
+        font-size: var(--xl);
+        color: var(--gray-dark);
+        letter-spacing: var(--letterspa_md);
+    }
+
+    .home-title-container div:nth-child(2) h1 {
+        font-size: var(--xl);
+        color: var(--gray-dark);
+        letter-spacing: var(--letterspa_md);
+    }
+
+    .home-title-container div:nth-child(1) h3 {
+        font-size: var(--md);
+
+    }
+
+    .home-title-container div:nth-child(2) h3 {
+        font-size: var(--md);
+
+    }
     .home-main .home-services-container {
         display: flex;
     }
 
+    .paralelogramo-orange a {
+        font-size: var(--xxxlm);
+
+    }
+
+    .paralelogramo-gray a {
+        font-size: var(--xxxlm);
+
+    }
+
+    .home-tienda-container div:nth-child(2) h1 {
+        font-size: var(--xl);
+
+    }
+
+    .home-tienda-container div:nth-child(2) h4 {
+        font-size: var(--md);
+
+    }
+
     .home-services-container .paralelogramo-gray {
         display: grid;
+    }
+
+    .home-tienda-container-one img {
+        width: 70%;
+    }
+
+    .home-tienda-container-two section h4 {
+
+        padding: 0 50px 0;
+    }
+
+    .home-tienda-container-four section h4 {
+
+        padding: 0 50px 0;
+    }
+
+    main .home-gdartia-container {
+        height: 100px;
+    }
+
+    .home-gdartia-container img {
+        width: 60%;
+
+    }
+
+    .home-gdartia-banner a {
+        color: var(--orange);
     }
 
 
@@ -347,100 +502,4 @@
     div:nth-child(8) {
         padding: 10px;
     }
-}
-
-
-@media screen and (max-width: 520px) {
-    .home-main {
-        place-content: normal;
-        grid-template-columns: 1fr;
-        grid-template-rows: 105px 300px 150px 750px 150px 600px;
-        width: 100%;
-    }
-
-    .home-main home-title-container {
-        grid-row: 1;
-
-    }
-
-    .home-main home-gdartia-banner {
-        margin: 0;
-    }
-
-
-    main .home-title-container {
-        width: 100%;
-    }
-
-    .section-main-one {
-        padding-right: 0;
-        width: 100%;
-    }
-
-    .section-main-two {
-        padding-left: 0;
-    }
-
-    .home-title-container .section-main-one h1 {
-        width: 100%;
-        font-size: var(--lg);
-
-    }
-
-    .home-title-container .section-main-one h3 {
-        font-size: var(--md);
-    }
-
-    .home-title-container .section-main-two h1 {
-        font-size: var(--lg);
-
-    }
-
-    .home-title-container .section-main-two h3 {
-        font-size: var(--md);
-    }
-
-    .paralelogramo-orange a {
-        font-size: var(--xxxlm);
-    }
-
-    .paralelogramo-gray a {
-        font-size: var(--xxxlm);
-    }
-
-    /* Titulo tienda */
-
-    .home-tienda-container div:nth-child(2) h1 {
-        font-size: var(--xl);
-        padding-top: 10px;
-    }
-
-    .home-tienda-container div:nth-child(2) h4 {
-        font-size: var(--md);
-
-    }
-
-    .home-gdartia-banner img {
-        scale: 0.7;
-
-    }
-
-    main .home-tienda-container-topproductos {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        grid-template-columns: 50% 50%;
-        width: 100%;
-        height: 100%;
-    }
-
-    footer div:nth-child(4),
-    div:nth-child(5),
-    div:nth-child(6) {
-        display: none;
-    }
-
-
-
 }
