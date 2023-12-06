@@ -28,7 +28,7 @@
 
 
 body {
-    font-family: 'Avenir-Light';
+    font-family: 'Avenir-Light', 'Avenir Next LT Pro', 'Avenir Next', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;

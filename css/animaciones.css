@@ -28,7 +28,7 @@
 
 
 body {
-  font-family: 'Avenir-Light';
+  font-family: 'Avenir-Light', 'Avenir Next LT Pro', 'Avenir Next', sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px 600px;
@@ -38,7 +38,6 @@ body {
   place-items: center;
   width: 100%;
 }
-
 
 
 /* main */
@@ -530,97 +529,10 @@ input:checked {
 }
 
 
-@media screen and (max-width: 1346px) {
-
-  header .nav-logo-container {
-      width: 100%;
-      left: 40px;
-  }
-
-  header .nav-logo-container a svg {
-      width: 44px;
-      height: 44px;
-  }
-
-  header .nav-logos-inv {
-      width: 100%;
-      justify-items: center;
-      left: 5%;
-
-  }
-
-  header .nav-logos-inv a svg {
-      width: 35px;
-      height: 35px;
-  }
-
-  header .nav-logo-container a:nth-child(1) {
-      display: none;
-  }
-
-  header .nav-logo-container a:nth-child(2) {
-      display: block;
-      width: 30%;
-  }
-
-}
 
 @media screen and (max-width: 1200px) {
 
-  header {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      padding: 0;
-      place-content: center;
 
-  }
-
-  header .nav-logo-container {
-      display: none;
-  }
-
-  nav {
-      display: none;
-  }
-
-  header .nav-logo-container a:nth-child(2) {
-      display: none;
-  }
-
-  header .contenedor-mobile-menu {
-      width: 100%;
-      grid-column: 1;
-      display: block;
-  }
-
-  header .contenedor-mobile-menu .menu {
-      width: 20%;
-      height: 100%;
-
-  }
-
-  header .contenedor-mobile-menu a svg {
-      width: 40px;
-      position: absolute;
-      left: 1%;
-      top: 32%;
-  }
-
-  header .nav-logos-inv {
-      grid-column: 2;
-      width: 100%;
-      left: 88%;
-
-  }
-
-  header .nav-logos-inv a svg {
-      width: 40px;
-  }
-
-  header.abajo .menu-cls-1 {
-      stroke: var(--white);
-  }
 
   main {
     display: flex;
@@ -671,22 +583,13 @@ input:checked {
 }
 
 @media screen and (max-width: 500px) {
-
-  header .contenedor-mobile-menu a svg {
-    width: 25px;
-    top: 34%;
-    left: 2%;
+  main {
+    height: 0;
+    display: flex;
+    justify-content: flex-end;
 }
-header .nav-logos-inv {
-    left: 86%;
-}
-
-header .nav-logos-inv a svg {
-    width: 25px;
-}
-
   .phone {
-    left: 50px;
+    display: none;
   }
 
 }
