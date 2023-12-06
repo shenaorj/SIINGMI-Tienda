@@ -403,6 +403,129 @@
         width: 30%;
     }
 
+    .mobile-menu ul:nth-child(2) img {
+        width: 70%;
+        padding-left: 15px;
+    }
+
+    .home-main {
+        margin-top: 100px;
+    }
+
+    .home-title-container {
+
+        margin-bottom: 50px;
+    }
+
+    .home-title-container div:nth-child(1) h1 {
+        font-size: var(--xl);
+        color: var(--gray-dark);
+        letter-spacing: var(--letterspa_md);
+    }
+
+    .home-title-container div:nth-child(2) h1 {
+        font-size: var(--xl);
+        color: var(--gray-dark);
+        letter-spacing: var(--letterspa_md);
+    }
+
+    .home-title-container div:nth-child(1) h3 {
+        font-size: var(--md);
+
+    }
+
+    .home-title-container div:nth-child(2) h3 {
+        font-size: var(--md);
+
+    }
+    .home-main .home-services-container {
+        display: flex;
+    }
+
+    .paralelogramo-orange a {
+        font-size: var(--xxxlm);
+
+    }
+
+    .paralelogramo-gray a {
+        font-size: var(--xxxlm);
+
+    }
+
+    .home-tienda-container div:nth-child(2) h1 {
+        font-size: var(--xl);
+
+    }
+
+    .home-tienda-container div:nth-child(2) h4 {
+        font-size: var(--md);
+
+    }
+
+    .home-services-container .paralelogramo-gray {
+        display: grid;
+    }
+
+    .home-tienda-container-one img {
+        width: 70%;
+    }
+
+    .home-tienda-container-two section h4 {
+
+        padding: 0 50px 0;
+    }
+
+    .home-tienda-container-four section h4 {
+
+        padding: 0 50px 0;
+    }
+
+    main .home-gdartia-container {
+        height: 100px;
+    }
+
+    .home-gdartia-container img {
+        width: 60%;
+
+    }
+
+    .home-gdartia-banner a {
+        color: var(--orange);
+    }
+
+
+
+    footer {
+        grid-template-columns: 2fr repeat(2, 1fr) 2fr;
+    }
+
+    footer div:nth-child(1),
+    div:nth-child(3),  div:nth-child(4) {
+        display: none;
+    }
+
+    footer div:nth-child(2),
+    div:nth-child(8) {
+        padding: 10px;
+    }
+
+    
+}
+
+@media screen and (max-width: 375px) {
+    header {
+        height: 70px;
+    }
+
+    header .nav-logos-inv svg {
+        width: 12%;
+
+    }
+
+    header.abajo .nav-logo-container img:nth-child(4) {
+        width: 30%;
+    }
+
     .home-main {
         margin-top: 100px;
     }
